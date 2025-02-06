@@ -1,0 +1,33 @@
+.btn {
+    padding: 10px;
+    border: none;
+    background-color: #364153;
+    color: rgb(190, 189, 189);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    transition: background-position 0.5s, transform 0.2s ease-out;
+    background-size: 200% auto;
+    color: rgb(179, 177, 177);
+    display: block;
+    cursor: pointer;
+}
+.btn {
+    background-image: linear-gradient(
+        to right,
+        #485563 0%,
+        #29323c 51%,
+        #485563 100%
+    );
+}
+
+.btn:hover {
+    background-position: right center;
+    text-decoration: none;
+}
+.btn:active {
+    transform: scale(0.94);
+    color: white;
+}
