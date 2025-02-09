@@ -1,0 +1,137 @@
+.skeleton {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+}
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 40px;
+}
+.preview {
+    width: 500px;
+    height: 300px;
+    background-color: #1c1f29;
+}
+.info {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.6fr 1fr 1fr 1.65fr;
+    text-align: start;
+    gap: 5px;
+}
+.info div {
+    height: 30px;
+    background-color: #1c1f29;
+}
+
+.line_1 {
+    width: 300px;
+    align-items: start;
+}
+.line_2,
+.line_3 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.line_4 {
+    width: 300px;
+    justify-self: end;
+    align-self: self-end;
+}
+
+.skeleton:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        110deg,
+        rgba(227, 227, 227, 0) 0%,
+        rgba(227, 227, 227, 0) 40%,
+        rgb(59, 65, 86) 50%,
+        rgba(227, 227, 227, 0) 60%,
+        rgba(227, 227, 227, 0) 100%
+    );
+    animation: gradient-animation_2 1.5s linear infinite;
+}
+
+@keyframes gradient-animation_2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+@media (max-width: 1280px) {
+    .skeleton {
+        width: 800px;
+        height: 250px;
+    }
+    .preview {
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 991px) {
+    .skeleton {
+        display: flex;
+        flex-direction: row;
+        width: 575px;
+        height: 225px;
+    }
+    .wrapper {
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+    }
+    .preview {
+        width: 200px;
+        height: 225px;
+    }
+    .line_1 {
+        width: 175px;
+        align-items: start;
+    }
+
+    .line_4 {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skeleton {
+        width: 350px;
+        height: 175px;
+    }
+    .wrapper {
+        grid-template-columns: 125px 1fr;
+        gap: 20px;
+    }
+    .info {
+        height: 175px;
+    }
+    .preview {
+        width: 125px;
+        height: 175px;
+    }
+    .line_1 {
+        width: 150px;
+    }
+    .line_2,
+    .line_3 {
+        margin-top: 5px;
+    }
+
+    .line_4 {
+        width: 100%;
+    }
+}

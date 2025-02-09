@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 80vw;
+    max-width: 600px;
+    min-width: 300px;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cont_description {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.schedule {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.btns_bar {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.txtArea {
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    min-height: 90px;
+    background-color: #16171d;
+    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+    outline: none;
+    border: none;
+    color: #fdfdff;
+    font-size: 1rem;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.txtArea ::placeholder {
+    color: #59595a;
+    font-family: "Roboto", sans-serif;
+}

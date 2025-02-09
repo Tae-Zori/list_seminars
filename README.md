@@ -1,50 +1,84 @@
-# React + TypeScript + Vite
+# List Seminars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**List Seminars** — это веб-приложение для управления списком семинаров. Позволяет просматривать, редактировать и удалять семинары. Использует **React**, **TypeScript** и **JSON Server** для эмуляции работы с сервером.
 
-Currently, two official plugins are available:
+## Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Просмотр списка доступных семинаров
+-   Редактирование существующих записей
+-   Удаление семинаров
+-   Имитация бэкенда через **JSON Server**
 
-## Expanding the ESLint configuration
+## Установка и запуск
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Клонирование репозитория
 
-- Configure the top-level `parserOptions` property like this:
+```sh
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+git clone https://github.com/Tae-Zori/list_seminars
+
+cd your-project
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Установка зависимостей
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm install
 ```
+
+### 3. Запуск проекта
+
+```sh
+npm run start
+```
+
+## Структура проекта
+
+📁 public
+📁 src
+┣ 📁 assets // Статические файлы (изображения, иконки)
+┣ 📁 components // UI-компоненты
+┣ 📁 provider // Контекст API
+┣ 📁 hooks // Пользовательские хуки
+┣ 📁 service // Работа с API и сервером
+┣ 📁 utils // Утилитарные функции
+┣ 📄 App.css // Основные стили приложения
+┣ 📄 App.tsx // Главный компонент приложения
+┣ 📄 index.css // Глобальные стили
+┣ 📄 normalize.css // Сброс стилей
+┗ 📄 main.tsx // Точка входа
+📄 seminars.json // Основной файл с семинарами
+
+## Описание команд
+
+🔹 npm run dev
+Запускает Vite в режиме разработки.
+
+🔹 npm run server
+Запускает JSON Server, который предоставляет REST API для работы с seminars.json.
+
+🔹 npm run start
+Запускает сразу и сервер, и клиент, используя пакет concurrently.
+Эквивалентно одновременному выполнению npm run server и npm run dev.
+
+🔹 npm run build
+Создает производственную сборку проекта.
+Запускает компилятор TypeScript (tsc -b) и сборщик Vite (vite build).
+
+🔹 npm run lint
+Запускает ESLint для проверки кода на ошибки и соответствие код-стайлу.
+
+🔹 npm run preview
+Позволяет запустить локальный сервер для просмотра готовой сборки.
+
+## Используемые технологии
+
+React + TypeScript
+CSS Modules
+Vite
+JSON Server
+Express (для резервного копирования данных)
+
+Автор:
+Анастасия Д
+denisenko.av98@gmail.com
